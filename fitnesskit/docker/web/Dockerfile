@@ -12,4 +12,3 @@ ENV PYTHONUNBUFFERED 1
 RUN pip install --upgrade pip
 COPY ./api_gateway/requirements.txt .
 RUN pip install -r requirements.txt
-RUN python manage.py collectstatic --skip-checks --noinput
