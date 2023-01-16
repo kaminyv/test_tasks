@@ -1,0 +1,186 @@
+{
+    "ClientConfiguration": {
+        "ConfigurationName": "Птицы",
+        "ConfigurationDescription": "Тестовое задание",
+        "ConfigurationVersion": "0.0.1",
+        "Processes": [
+            {
+                "type": "Process",
+                "ProcessName": "Птицы",
+                "PlanFactHeader": "План-факт",
+                "DefineOnBackPressed": false,
+                "hidden": false,
+                "login_screen": false,
+                "SC": false,
+                "Operations": [
+                    {
+                        "type": "Operation",
+                        "Name": "Птицы",
+                        "Timer": false,
+                        "hideToolBarScreen": false,
+                        "noScroll": false,
+                        "handleKeyUp": false,
+                        "noConfirmation": true,
+                        "hideBottomBarScreen": false,
+                        "onlineOnStart": false,
+                        "send_when_opened": false,
+                        "onlineOnInput": false,
+                        "DefOnlineOnCreate": "",
+                        "DefOnlineOnInput": "",
+                        "DefOnCreate": "birds_on_start",
+                        "DefOnInput": "birds_input",
+                        "Elements": [
+                            {
+                                "Value": "",
+                                "Variable": "",
+                                "type": "LinearLayout",
+                                "weight": "0",
+                                "height": "match_parent",
+                                "width": "match_parent",
+                                "orientation": "vertical",
+                                "Elements": [
+                                    {
+                                        "type": "LinearLayout",
+                                        "height": "wrap_content",
+                                        "width": "match_parent",
+                                        "weight": "0",
+                                        "Value": "",
+                                        "Variable": "",
+                                        "orientation": "vertical",
+                                        "Elements": [
+                                            {
+                                                "type": "Button",
+                                                "height": "wrap_content",
+                                                "width": "match_parent",
+                                                "weight": "0",
+                                                "Value": "Очистить БД",
+                                                "Variable": "btn_db_clean"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "type": "LinearLayout",
+                                        "height": "wrap_content",
+                                        "width": "match_parent",
+                                        "weight": "0",
+                                        "Value": "Добавить",
+                                        "Variable": "btn_add",
+                                        "orientation": "horizontal",
+                                        "Elements": [
+                                            {
+                                                "type": "Button",
+                                                "height": "wrap_content",
+                                                "width": "match_parent",
+                                                "weight": "1",
+                                                "Value": "#f055",
+                                                "Variable": "btn_add",
+                                                "TextSize": "25",
+                                                "BackgroundColor": "#3CB371"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "type": "CardsLayout",
+                                        "height": "match_parent",
+                                        "width": "match_parent",
+                                        "weight": "0",
+                                        "Value": "@birds_list",
+                                        "Variable": ""
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "Name": "ПтицыЗапись",
+                        "type": "Operation",
+                        "Elements": [
+                            {
+                                "Value": "",
+                                "Variable": "",
+                                "type": "LinearLayout",
+                                "weight": "0",
+                                "height": "match_parent",
+                                "width": "match_parent",
+                                "orientation": "vertical",
+                                "Elements": [
+                                    {
+                                        "type": "Button",
+                                        "height": "wrap_content",
+                                        "width": "match_parent",
+                                        "weight": "0",
+                                        "Value": "Сохранить...",
+                                        "Variable": "btn_save",
+                                        "BackgroundColor": "#E4D00A"
+                                    },
+                                    {
+                                        "type": "TextView",
+                                        "height": "wrap_content",
+                                        "width": "match_parent",
+                                        "weight": "0",
+                                        "Value": "Название",
+                                        "Variable": ""
+                                    },
+                                    {
+                                        "type": "EditTextText",
+                                        "height": "wrap_content",
+                                        "width": "match_parent",
+                                        "weight": "0",
+                                        "Value": "@name",
+                                        "Variable": "name"
+                                    },
+                                    {
+                                        "type": "TextView",
+                                        "height": "wrap_content",
+                                        "width": "match_parent",
+                                        "weight": "0",
+                                        "Value": "Цвет перьев",
+                                        "Variable": ""
+                                    },
+                                    {
+                                        "type": "EditTextText",
+                                        "height": "wrap_content",
+                                        "width": "match_parent",
+                                        "weight": "0",
+                                        "Value": "@feather_color",
+                                        "Variable": "feather_color"
+                                    }
+                                ]
+                            },
+                            {
+                                "Value": "#f2ed",
+                                "Variable": "menu_del",
+                                "type": "MenuItem"
+                            }
+                        ],
+                        "Timer": false,
+                        "hideToolBarScreen": false,
+                        "noScroll": false,
+                        "handleKeyUp": false,
+                        "hideBottomBarScreen": true,
+                        "onlineOnStart": false,
+                        "onlineOnInput": false,
+                        "DefOnCreate": "bird_record_on_start",
+                        "DefOnInput": "bird_record_input"
+                    }
+                ]
+            }
+        ],
+        "ConfigurationSettings": {
+            "uid": "7348a424097346a6ae14420bc6e81e28"
+        },
+        "ConfigurationTags": "Py,off-line",
+        "StopForegroundServiceOnExit": false,
+        "PyTimerTask": [
+            {
+                "PyTimerTaskKey": "init",
+                "PyTimerTaskDef": "init",
+                "PyTimerTaskPeriod": "-1",
+                "PyTimerTaskBuilIn": false
+            }
+        ],
+        "RunPython": true,
+        "PyHandlers": "aW1wb3J0IGpzb24KZnJvbSBqYXZhIGltcG9ydCBqY2xhc3MKCm5vQ2xhc3MgPSBqY2xhc3MoInJ1LnRyYXZlbGZvb2Quc2ltcGxlX3VpLk5vU1FMIikKbmNsID0gbm9DbGFzcygiZGJfYmlyZHMiKQoKZGVmIGJpcmRzX29uX3N0YXJ0KGhhc2hNYXAsIF9maWxlcz1Ob25lLCBfZGF0YT1Ob25lKToKICAgIGJpcmRzX2NhcmRzID0geyJjYXJkcyI6IFtdfQogICAgZGJfa2V5cyA9IGpzb24ubG9hZHMobmNsLmdldGFsbGtleXMoKSkKICAgIGZvciBrZXkgaW4gZGJfa2V5czoKICAgICAgICBkYl9kYXRhID0ganNvbi5sb2FkcyhuY2wuZ2V0KGtleSkpCiAgICAgICAgYmlyZHNfY2FyZHNbImNhcmRzIl0uYXBwZW5kKHsKICAgICAgICAgICAgImtleSI6IGtleSwKICAgICAgICAgICAgInBpY3R1cmUiOiAiIiwKICAgICAgICAgICAgImRlc2NyaXB0aW9uIjogIiIsCiAgICAgICAgICAgICJpdGVtcyI6IFsKICAgICAgICAgICAgICAgIHsKICAgICAgICAgICAgICAgICAgICAia2V5IjogItCd0LDQt9Cy0LDQvdC40LUg0L/RgtC40YbRiyIsCiAgICAgICAgICAgICAgICAgICAgInZhbHVlIjoga2V5LAogICAgICAgICAgICAgICAgICAgICJzaXplIjogIjE4IiwKICAgICAgICAgICAgICAgICAgICAiY29sb3IiOiAiIzFiMzFjMiIsCiAgICAgICAgICAgICAgICB9LAogICAgICAgICAgICAgICAgewogICAgICAgICAgICAgICAgICAgICJrZXkiOiAi0KbQstC10YIg0L7Qv9C10YDQtdC90LjRjyIsCiAgICAgICAgICAgICAgICAgICAgInZhbHVlIjogZGJfZGF0YS5nZXQoImZlYXRoZXJfY29sb3IiKSwKICAgICAgICAgICAgICAgICAgICAic2l6ZSI6ICIxOCIsCiAgICAgICAgICAgICAgICAgICAgImNvbG9yIjogIiMxYjMxYzIiCiAgICAgICAgICAgICAgICB9XQogICAgICAgICAgICB9KQoKICAgIGhhc2hNYXAucHV0KCJiaXJkc19saXN0Iixqc29uLmR1bXBzKGJpcmRzX2NhcmRzKSkKICAgICAgICAgCiAgICByZXR1cm4gaGFzaE1hcAoKCmRlZiBiaXJkc19pbnB1dChoYXNoTWFwLCBfZmlsZXM9Tm9uZSwgX2RhdGE9Tm9uZSk6CiAgICBpZiBoYXNoTWFwLmdldCgibGlzdGVuZXIiKSA9PSAiYnRuX2FkZCI6CiAgICAgICAgaGFzaE1hcC5wdXQoIm5hbWUiLCAiIikKICAgICAgICBoYXNoTWFwLnB1dCgiZmVhdGhlcl9jb2xvciIsICIiKQogICAgICAgIGhhc2hNYXAucHV0KCJTaG93U2NyZWVuIiwgItCf0YLQuNGG0YvQl9Cw0L/QuNGB0YwiKQogICAgZWxpZiBoYXNoTWFwLmdldCgibGlzdGVuZXIiKSA9PSAiYnRuX2RiX2NsZWFuIjoKICAgICAgICBuY2wuZGVzdHJveSgpCiAgICAgICAgaGFzaE1hcC5wdXQoInRvYXN0IiwgItCR0LDQt9CwINC+0YfQuNGJ0LXQvdCwIikKICAgIGVsaWYgaGFzaE1hcC5nZXQoImxpc3RlbmVyIik9PSJDYXJkc0NsaWNrIjoKICAgICAgICBrZXkgPSBoYXNoTWFwLmdldCgic2VsZWN0ZWRfY2FyZF9rZXkiKQogICAgICAgIGRiX2RhdGEgPSBqc29uLmxvYWRzKG5jbC5nZXQoa2V5KSkKICAgICAgICBoYXNoTWFwLnB1dCgibmFtZSIsIGtleSkKICAgICAgICBoYXNoTWFwLnB1dCgiZmVhdGhlcl9jb2xvciIsIGRiX2RhdGEuZ2V0KCJmZWF0aGVyX2NvbG9yIikpCiAgICAgICAgaGFzaE1hcC5wdXQoIlNob3dTY3JlZW4iLCAi0J/RgtC40YbRi9CX0LDQv9C40YHRjCIpCgogICAgcmV0dXJuIGhhc2hNYXAKCgpkZWYgYmlyZF9yZWNvcmRfb25fc3RhcnQoaGFzaE1hcCwgX2ZpbGU9Tm9uZSwgX2RhdGE9Tm9uZSk6CiAgICBpZiBub3QgaGFzaE1hcC5jb250YWluc0tleSgibmFtZSIpOgogICAgICAgIGhhc2hNYXAucHV0KCJuYW1lIiwgIiIpCiAgICBpZiBub3QgaGFzaE1hcC5jb250YWluc0tleSgiZmVhdGhlcl9jb2xvciIpOgogICAgICAgIGhhc2hNYXAucHV0KCJmZWF0aGVyX2NvbG9yIiwgIiIpCiAgICByZXR1cm4gaGFzaE1hcAoKCmRlZiBiaXJkX3JlY29yZF9pbnB1dChoYXNoTWFwLCBfZmlsZT1Ob25lLCBfZGF0YT1Ob25lKTogICAKICAgIGlmIGhhc2hNYXAuZ2V0KCJsaXN0ZW5lciIpID09ICJidG5fc2F2ZSI6CiAgICAgICAgaWYgbGVuKGhhc2hNYXAuZ2V0KCJuYW1lIikpID09IDAgb3IgbGVuKGhhc2hNYXAuZ2V0KCJmZWF0aGVyX2NvbG9yIikpID09IDA6CiAgICAgICAgICAgIGhhc2hNYXAucHV0KCJ0b2FzdCIsICLQndC1INC30LDQv9C+0LvQvdC10L3RiyDQv9C+0LvRjyIpCiAgICAgICAgZWxzZToKICAgICAgICAgICAgZGF0YSA9IHsKICAgICAgICAgICAgICAgICJmZWF0aGVyX2NvbG9yIjogaGFzaE1hcC5nZXQoImZlYXRoZXJfY29sb3IiKX0KICAgICAgICAgICAgbmNsLnB1dChoYXNoTWFwLmdldCgibmFtZSIpLCBqc29uLmR1bXBzKGRhdGEgLGVuc3VyZV9hc2NpaT1GYWxzZSksIFRydWUpCiAgICAgICAgICAgIGhhc2hNYXAucHV0KCJTaG93U2NyZWVuIiwgItCf0YLQuNGG0YsiKQogICAgZWxpZiBoYXNoTWFwLmdldCgibGlzdGVuZXIiKSA9PSAibWVudV9kZWwiOgogICAgICAgIG5jbC5kZWxldGUoaGFzaE1hcC5nZXQoIm5hbWUiKSkKICAgIGVsaWYgaGFzaE1hcC5nZXQoImxpc3RlbmVyIik9PSdPTl9CQUNLX1BSRVNTRUQnOiAKICAgICAgICBoYXNoTWFwLnB1dCgiU2hvd1NjcmVlbiIsItCf0YLQuNGG0YsiKQogICAgcmV0dXJuIGhhc2hNYXAKCgpkZWYgaW5pdChoYXNoTWFwLCBfZmlsZXM9Tm9uZSwgX2RhdGE9Tm9uZSk6CiAgICBuY2wucnVuX2luZGV4KCJuYW1laW5kZXgiLCJuYW1lIikKICAgIHJldHVybiBoYXNoTWFwCg==",
+        "BroadcastIntent": ""
+    }
+}
