@@ -1,8 +1,10 @@
 import json
 from java import jclass
 
+
 noClass = jclass("ru.travelfood.simple_ui.NoSQL")
 ncl = noClass("db_birds")
+
 
 def birds_on_start(hashMap, _files=None, _data=None):
     birds_cards = {"cards": []}
